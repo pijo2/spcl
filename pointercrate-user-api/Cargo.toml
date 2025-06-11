@@ -1,0 +1,27 @@
+[package]
+name = "pointercrate-user-api"
+version = "0.1.0"
+authors.workspace = true
+edition.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = {version = "0.5.1", features = ["json"]}
+sqlx = { version = "0.8", default-features = false, features = [ "runtime-tokio-native-tls", "macros", "postgres", "chrono", "migrate" ] }
+pointercrate-user = {path = "../pointercrate-user"}
+pointercrate-user-pages = {path = "../pointercrate-user-pages"}
+pointercrate-core = {path = "../pointercrate-core"}
+pointercrate-core-api = {path = "../pointercrate-core-api"}
+log = "0.4.27"
+base64 = "0.22.1"
+nonzero_ext = "0.3.0"
+governor = "0.10.0"
+
+# Dependencies needed only for oauth2
+reqwest = { version = "0.12.19", optional = true, features = ["json"] }
+chrono = { version = "0.4.41", optional = true }
+
+[features]
+legacy_accounts = ["pointercrate-user/legacy_accounts"]
+oauth2 = ["pointercrate-user-pages/oauth2", "pointercrate-user/oauth2", "chrono", "reqwest"]
