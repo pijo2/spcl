@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "mr bartek",
+    "creator": "Bartczek",
+    "verifier": "Bartczek",
+    "publisher": "Bartczek",
+    "video": "https://www.youtube.com/embed/YOUTUBE_VIDEO_ID",
+    "points": 200,
+    "level_id": 117898527,
+    "password": "Free to copy"
+  },
+  {
+    "id": 2,
+    "name": "Exescape",
+    "creator": "Unknown",
+    "verifier": "Unknown",
+    "publisher": "Unknown",
+    "video": "https://www.youtube.com/embed/YOUTUBE_VIDEO_ID",
+    "points": 190,
+    "level_id": 123456789,
+    "password": "Free to copy"
+  }
+]
